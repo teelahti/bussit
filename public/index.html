@@ -8,7 +8,7 @@
     <title>Bussit Muijala</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="manifest" href="/manifest.json">
-    <script defer src="js/script.js"></script>
+    <!-- <script defer src="js/script.js"></script> -->
 </head>
 
 <body>
@@ -34,5 +34,15 @@
         </div>
     </div>
 </body>
-
+<script>
+    if ('serviceWorker' in navigator) {
+      console.log("Registering service worker...");
+      navigator.serviceWorker.register('service-worker.js')
+        .then(function(reg){
+          console.log("...registered.");
+        }).catch(function(err) {
+          console.log("...failed: ", err)
+        });
+    }
+  </script>
 </html>
