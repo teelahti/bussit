@@ -4,6 +4,7 @@ Small personal website to show bus schedules for single route only (to overcome 
 
 ## Deploy
 
+To get proper HTTPS support for free, using Google Firebase hosting instead of Github pages.
 Requires Google Firebase CLI installed.
 
     firebase deploy
