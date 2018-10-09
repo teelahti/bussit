@@ -9,31 +9,62 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">    
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
     <style>
+        html {
+            height: 100%;
+        }
+
         body {
+            height: 100%;
             padding: 20px 50px;
-            font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font: 14px/1.5;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 400;
         }
 
-        h2 {
-            color: #393939;
-            margin: 0 0 20px;
-            line-height: 1.1;
+        a {
+            margin: 10px;
+            padding: 30px;
+            font-size: 1.5em;
+
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
         }
 
-        a {
-            color: #39c;
-            text-decoration: none;
-        }
         a:hover {
-            color: #069;
+            /* color: #069; */
+            background-position: right center;
         }
 
         .wrapper {
+            height: 100%;
             width: 860px;
             margin: 0 auto;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .wrapper>a {
+            flex: 1;
+            width: 100%;
+        }
+
+        .btn-1 {
+            background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 51%, #a1c4fd 100%);
+        }
+
+        .btn-2 {
+            background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
         }
 
         @media screen and (max-width: 960px) {
@@ -53,25 +84,19 @@
 
 <body>
     <div class="wrapper">
-        <div>
-            <h2 id="muihki">
-                <a href="https://liput.matkahuolto.fi/connectionlist?lang=fi&arrivalPlaceId=p1001&departurePlaceId=s32314&noTransfers#breadcrumb">Muijala 2 - Helsinki</a>
-            </h2>
 
-            <h2 id="hkimui">
-                <a href="https://liput.matkahuolto.fi/connectionlist?lang=fi&arrivalPlaceId=s32314&departurePlaceId=p1001&noTransfers#breadcrumb">Helsinki - Muijala 2</a>
-            </h2>
-        </div>
-        <hr/>
-        <div>
-            <h2 id="muiloh">
-                <a href="https://liput.matkahuolto.fi/connectionlist?lang=fi&arrivalPlaceId=p1054&departurePlaceId=s32314&noTransfers#breadcrumb">Muijala 2 - Lohja</a>
-            </h2>
+        <a class="btn-1" href="https://liput.matkahuolto.fi/connectionlist?lang=fi&arrivalPlaceId=p1001&departurePlaceId=s32314&noTransfers#breadcrumb">Muijala
+            2 - Helsinki</a>
 
-            <h2 id="lohmui">
-                <a href="https://liput.matkahuolto.fi/connectionlist?lang=fi&arrivalPlaceId=s32314&departurePlaceId=p1054&noTransfers#breadcrumb">Lohja - Muijala 2</a>
-            </h2>
-        </div>
+        <a class="btn-1" href="https://liput.matkahuolto.fi/connectionlist?lang=fi&arrivalPlaceId=s32314&departurePlaceId=p1001&noTransfers#breadcrumb">Helsinki
+            - Muijala 2</a>
+
+        <a class="btn-2" href="https://liput.matkahuolto.fi/connectionlist?lang=fi&arrivalPlaceId=p1054&departurePlaceId=s32314&noTransfers#breadcrumb">Muijala
+            2 - Lohja</a>
+
+        <a class="btn-2" href="https://liput.matkahuolto.fi/connectionlist?lang=fi&arrivalPlaceId=s32314&departurePlaceId=p1054&noTransfers#breadcrumb">Lohja
+            - Muijala 2</a>
+
     </div>
 </body>
 <script>
