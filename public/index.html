@@ -1,114 +1,149 @@
 <!DOCTYPE html>
 <html lang="fi">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="theme-color" content="#a19cec" />
     <title>Bussit Muijala</title>
-    <link rel="manifest" href="/manifest.json">
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/img/favicon-16x16.png"
+    />
     <style>
-        html {
-            height: 100%;
-        }
+      html {
+        height: 100%;
+      }
 
+      body {
+        height: 100%;
+        padding: 20px 50px;
+        margin: 0;
+        font: 14px/1.5;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+      }
+
+      a {
+        margin: 10px;
+        padding: 30px;
+        font-size: 1.5em;
+
+        text-decoration: none;
+        text-align: center;
+        vertical-align: middle;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;
+        box-shadow: 0 0 20px #eee;
+        border-radius: 10px;
+      }
+
+      a:hover {
+        /* color: #069; */
+        background-position: right center;
+      }
+
+      .wrapper {
+        height: 90%;
+        width: 860px;
+        margin: 0 auto;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .wrapper > a {
+        flex: 1;
+        width: 80%;
+      }
+
+      .btn-1 {
+        background-image: linear-gradient(
+          to right,
+          #a1c4fd 0%,
+          #c2e9fb 51%,
+          #a1c4fd 100%
+        );
+      }
+
+      .btn-2 {
+        background-image: linear-gradient(
+          to right,
+          #f6d365 0%,
+          #fda085 51%,
+          #f6d365 100%
+        );
+      }
+
+      @media screen and (max-width: 960px) {
+        div.wrapper {
+          width: auto;
+          margin: 0;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
         body {
-            height: 100%;
-            padding: 20px 50px;
-            font: 14px/1.5;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 400;
+          padding: 15px;
         }
-
-        a {
-            margin: 10px;
-            padding: 30px;
-            font-size: 1.5em;
-
-            text-decoration: none;
-            text-align: center;
-            vertical-align: middle;
-            text-transform: uppercase;
-            transition: 0.5s;
-            background-size: 200% auto;
-            color: white;
-            box-shadow: 0 0 20px #eee;
-            border-radius: 10px;
-        }
-
-        a:hover {
-            /* color: #069; */
-            background-position: right center;
-        }
-
-        .wrapper {
-            height: 100%;
-            width: 860px;
-            margin: 0 auto;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .wrapper>a {
-            flex: 1;
-            width: 100%;
-        }
-
-        .btn-1 {
-            background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 51%, #a1c4fd 100%);
-        }
-
-        .btn-2 {
-            background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
-        }
-
-        @media screen and (max-width: 960px) {
-            div.wrapper {
-                width: auto;
-                margin: 0;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            body {
-                padding: 15px;
-            }
-        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="wrapper">
+      <a
+        class="btn-1"
+        href="https://liput.matkahuolto.fi/connectionlist?lang=fi&arrivalPlaceId=p1001&departurePlaceId=s32314&noTransfers#breadcrumb"
+        >Muijala 2 - Helsinki</a
+      >
 
-        <a class="btn-1" href="https://liput.matkahuolto.fi/connectionlist?lang=fi&arrivalPlaceId=p1001&departurePlaceId=s32314&noTransfers#breadcrumb">Muijala
-            2 - Helsinki</a>
+      <a
+        class="btn-1"
+        href="https://liput.matkahuolto.fi/connectionlist?lang=fi&arrivalPlaceId=s32314&departurePlaceId=p1001&noTransfers#breadcrumb"
+        >Helsinki - Muijala 2</a
+      >
 
-        <a class="btn-1" href="https://liput.matkahuolto.fi/connectionlist?lang=fi&arrivalPlaceId=s32314&departurePlaceId=p1001&noTransfers#breadcrumb">Helsinki
-            - Muijala 2</a>
+      <a
+        class="btn-2"
+        href="https://liput.matkahuolto.fi/connectionlist?lang=fi&arrivalPlaceId=p1054&departurePlaceId=s32314&noTransfers#breadcrumb"
+        >Muijala 2 - Lohja</a
+      >
 
-        <a class="btn-2" href="https://liput.matkahuolto.fi/connectionlist?lang=fi&arrivalPlaceId=p1054&departurePlaceId=s32314&noTransfers#breadcrumb">Muijala
-            2 - Lohja</a>
-
-        <a class="btn-2" href="https://liput.matkahuolto.fi/connectionlist?lang=fi&arrivalPlaceId=s32314&departurePlaceId=p1054&noTransfers#breadcrumb">Lohja
-            - Muijala 2</a>
-
+      <a
+        class="btn-2"
+        href="https://liput.matkahuolto.fi/connectionlist?lang=fi&arrivalPlaceId=s32314&departurePlaceId=p1054&noTransfers#breadcrumb"
+        >Lohja - Muijala 2</a
+      >
     </div>
-</body>
-<script>
-    if ('serviceWorker' in navigator) {
-        console.log("Registering service worker...");
-        navigator.serviceWorker.register('service-worker.js')
-            .then(function (reg) {
-                console.log("...registered.");
-            }).catch(function (err) {
-                console.log("...failed: ", err)
-            });
+  </body>
+  <script>
+    if ("serviceWorker" in navigator) {
+      console.log("Registering service worker...");
+      navigator.serviceWorker
+        .register("service-worker.js")
+        .then(function(reg) {
+          console.log("...registered.");
+        })
+        .catch(function(err) {
+          console.log("...failed: ", err);
+        });
     }
-</script>
-
+  </script>
 </html>
