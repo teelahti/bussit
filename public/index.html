@@ -49,7 +49,6 @@
         transition: 0.5s;
         background-size: 200% auto;
         color: white;
-        box-shadow: 0 0 20px #eee;
         border-radius: 10px;
       }
 
@@ -89,6 +88,12 @@
           #fda085 51%,
           #f6d365 100%
         );
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #000;
+        }
       }
 
       @media screen and (max-width: 960px) {
